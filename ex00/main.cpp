@@ -6,8 +6,14 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 10:00:04 by nmedeiro          #+#    #+#             */
-/*   Updated: 2025/08/15 10:00:13 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2025/08/15 10:55:32 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+int main()
+{
+    ClapTrap test("test");
+    test.attack("test");
+}
