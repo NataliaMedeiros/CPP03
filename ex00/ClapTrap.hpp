@@ -6,7 +6,7 @@
 /*   By: natalia <natalia@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/06 09:31:23 by natalia       #+#    #+#                 */
-/*   Updated: 2025/10/08 09:58:44 by natalia       ########   odam.nl         */
+/*   Updated: 2025/10/08 10:06:51 by natalia       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ private:
 	int			attackDamage;
 public:
 	ClapTrap(); //Default constructor
+	ClapTrap(std::string name);
 	ClapTrap(const ClapTrap &clapTrap); //Copy constructor
 	ClapTrap& operator=(const ClapTrap &clapTrap); //Copy assignment operator
 	~ClapTrap();//Destructor

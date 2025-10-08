@@ -1,6 +1,6 @@
-NAME = claptrap
+NAME = 
 
-SRC = ClapTrap.cpp main.cpp
+SRC = 
 
 OBJ = $(SRC:.cpp=.o)
 
