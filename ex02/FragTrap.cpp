@@ -6,7 +6,7 @@
 /*   By: natalia <natalia@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/09 10:28:02 by natalia       #+#    #+#                 */
-/*   Updated: 2025/10/09 10:55:10 by natalia       ########   odam.nl         */
+/*   Updated: 2025/10/09 10:56:38 by natalia       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ FragTrap &FragTrap::operator=(const FragTrap &source)
 	{
 		ClapTrap::operator=(source);
 	}
+	std::cout << "FragTrap copy assignment operator called!" << std::endl;
 	return (*this);
 }
 
