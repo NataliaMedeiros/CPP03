@@ -6,7 +6,7 @@
 /*   By: natalia <natalia@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/08 09:45:41 by natalia       #+#    #+#                 */
-/*   Updated: 2025/10/08 12:40:43 by natalia       ########   odam.nl         */
+/*   Updated: 2025/10/09 10:00:50 by natalia       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 ClapTrap::ClapTrap() : name("Default"), hitPoints(10), energyPoints(10), attackDamage(0)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "ClapTrap default constructor called" << std::endl;
 }
 ClapTrap::ClapTrap(std::string newName) : name(newName), hitPoints(10), energyPoints(10), attackDamage(0)
 {
-    std::cout << "Constructor with name '" << this->name << "' as parameter called" << std::endl;
+    std::cout << "ClapTrap constructor with name '" << this->name << "' as parameter called" << std::endl;
 }
 ClapTrap::ClapTrap(const ClapTrap &clapTrap)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "ClapTrap copy constructor called" << std::endl;
 	this->name = clapTrap.name;
 	this->hitPoints = clapTrap.hitPoints;
 	this->energyPoints = clapTrap.energyPoints;
@@ -30,7 +30,7 @@ ClapTrap::ClapTrap(const ClapTrap &clapTrap)
 }
 ClapTrap& ClapTrap::operator=(const ClapTrap &clapTrap)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << "ClapTrap copy assignment operator called" << std::endl;
 	if (this != &clapTrap)
 	{
 		this->name = clapTrap.name;
@@ -43,7 +43,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &clapTrap)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "ClapTrap destructor called" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)
@@ -69,7 +69,6 @@ void ClapTrap::takeDamage(unsigned int amount)
 	hitPoints = (amount >= hitPoints) ? 0 : hitPoints - amount;
     std::cout << "ClapTrap " << name << " takes " << amount
               << " points of damage! Remaining hit points: " << hitPoints << std::endl;
-
 }
 
 void ClapTrap::beRepaired(unsigned int amount)

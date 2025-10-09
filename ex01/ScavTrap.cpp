@@ -6,7 +6,7 @@
 /*   By: natalia <natalia@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/08 12:45:39 by natalia       #+#    #+#                 */
-/*   Updated: 2025/10/08 14:39:56 by natalia       ########   odam.nl         */
+/*   Updated: 2025/10/09 09:55:30 by natalia       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ ScavTrap::ScavTrap() : ClapTrap()
 
 ScavTrap::ScavTrap(const ScavTrap &source) : ClapTrap(source)
 {
-	std::cout << "ScavTrap" << name << std::endl;
+	std::cout << "ScavTrap '" << name << "' is called!" << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &source)
@@ -40,11 +40,11 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	this->hitPoints = 100;
 	this->energyPoints = 50;
 	this->attackDamage = 20;
-	std::cout << "ScavTrap " << name << " is born!" << std::endl;
+	std::cout << "ScavTrap '" << this->name << "' is born!" << std::endl;
 }
 ScavTrap::~ScavTrap()
 {
-	std::cout << "Destructor is called" << std::endl;
+	std::cout << "ScavTrap destructor is called" << std::endl;
 }
 
 void ScavTrap::attack(const std::string &target)
@@ -52,7 +52,7 @@ void ScavTrap::attack(const std::string &target)
 	if (this->energyPoints > 0 && this->hitPoints > 0)
 	{
 		this->energyPoints--;
-		std::cout << "ScavTrap " << this->name << " attacks "
+		std::cout << "ScavTrap '" << this->name << "' attacks "
 				<< target << ", causing " << this->attackDamage
 				<< " points of damage!" << std::endl;
 		return ;
