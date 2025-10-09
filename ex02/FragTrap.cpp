@@ -6,7 +6,7 @@
 /*   By: natalia <natalia@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/10/09 10:28:02 by natalia       #+#    #+#                 */
-/*   Updated: 2025/10/09 10:43:51 by natalia       ########   odam.nl         */
+/*   Updated: 2025/10/09 10:55:10 by natalia       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ FragTrap::FragTrap() : ClapTrap()
 
 FragTrap::FragTrap(const FragTrap &source) : ClapTrap(source)
 {
-	std::cout << "FragTrap '" << name << "' is called!" << std::endl;
+	std::cout << "FragTrap '" << this->name << "' is called!" << std::endl;
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &source)
